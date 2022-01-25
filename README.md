@@ -4,7 +4,7 @@
 
 Les variables en PHP sont déclarés de la manière suivante :
 `$var1 = valeur`. En PHP pas besoin de déclarer de type.
-
+---
 ## Les commandes de base
 
 * **echo** : Echo permet d'afficher des élements à l'écran, de manière similaire à un print en Java ou autre. Il est
@@ -19,16 +19,42 @@ Les variables en PHP sont déclarés de la manière suivante :
 
 * **count()** : Permet de compter le nombre d'éléments d'une array.
 * **implode($glue, $pieces)** : Convertit une array en string pour en afficher les éléments.
-* **print_r()** : Affiche les éléments d'une array ainsi que leurs index.
+* **print_r()** : Affiche les éléments d'une array ainsi que leurs index. -> wrapper avec \<pre> pour une milleur lisibilité
 * **array_pop()** : Permet de retirer un élément en partant de la fin d'une array et le retourner pour qu'il puisse être
   assigné à une nouvelle variable si on le souhaite.
 * **array_push()** : Ajoute un ou plusieurs éléments à la fin d'une array. Retourne le nombre total d'éléments après
   ajout.
 * **array_shift()** : Pop le premier élément d'une array, retourne sa valeur.
-* **array_unshift() : Add un ou plusieurs éléments au début d'une array, retourne le nombre total d'éléments après
+* **array_unshift()** : Add un ou plusieurs éléments au début d'une array, retourne le nombre total d'éléments après
   ajout.
-
+* **unset()** : Permet de retirer entièrement une paire clé / valeur d'un tableau associatif.
+* **rand()** : Permet de retourner un nombre aléatoire.
+* **var_dump($)** : Affiche des informations concernant les variables choisies. Cette commande donne la valeur de la variable mais peut également donner le type de celle ci (float, int...).
+---
 ### Ajouter un élément à une array
 
 * **$string_array[] = "third element";** -> Ajouter la valeur à la fin de l'array existante.
 * **$string_array[x] = "third element";** -> Change la valeur à l'index X de l'array existante.
+---
+### Créer une map / Array associative
+
+* $my_array = ["panda" => "very cute", "lizard" => "cute", "cockroach" => "not very cute"];
+* $about_me = array(
+  "fullname" => "Aisle Nevertell",
+  "social" => 123456789
+  );
+* $php_array = array(
+  "language" => "PHP",
+  "creator" => "Rasmus Lerdorf",
+  "year_created" => 1995,
+  "filename_extensions" =>  [".php", ".phtml", ".php3", ".php4", ".php5", ".php7", ".phps", ".php-s", ".pht", ".phar"]
+  );
+## Les boucles 
+
+* **while** : <br />``$count = 1;``<br />``
+  while ($count < 11)
+  {``<br />``
+  echo "The count is: " . $count . "\n";``<br />``
+  $count += 1;
+  }``
+* 
