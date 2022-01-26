@@ -101,4 +101,21 @@ Les boucles **foreach** peuvent également être utilisées avec des tableaux as
 
 * **Opérateur ?:** : Permet de vérifier si une condition est vraie ou fausse, et de retourner une valeur en fonction. Exemple :<br />
 ``$isClicked = FALSE;``<br />``
-  $link_color = $isClicked ? "purple" : "blue";`` -> Retourne "purple" ou "blue"
+  $link_color = $isClicked ? "purple" : "blue";`` -> Retourne "purple" ou "blue"<br /><br />
+`function ternaryCheckout($items){`<br />`
+  return $items <= 12 ? "express lane" : "regular lane";`<br />`
+  }`<br />
+
+## Valeurs / Expressions retournant FALSE
+* Strings vides
+* null
+* Variables non définies ou non déclarées
+* Array vide
+* Le chiffre 0
+* La string "0"
+
+## Opérateurs conditionels
+
+* **||** : OR
+* **&&** : AND
+* **!value** : NOT
