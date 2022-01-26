@@ -83,4 +83,22 @@ Les boucles **foreach** peuvent également être utilisées avec des tableaux as
 * Le retour peut être affiché directement sans avoir à l'attribuer à une variable : ``echo bonjour()``. On peut donc faire directement des opérations grâce aux valeurs retournées par la fonction.
 * Les fonctions qui n'ont pas pour but de retourner de valeurs retournent tout de même quoi qu'il arrive la valeur ```NULL```
 * Pour le passage de paramètres, il suffit d'indiquer des variables porte-noms entre les parenthèses d'initialisation de la fonction :
-`function sayCustomHello($name)`
+`function sayCustomHello($name, $age)`
+* Il est possible d'indiquer une valeur de paramètre par défaut, pour éviter de provoquer des erreurs si aucun paramètre n'est renseigné lors de l'appel de la fonction : <br />``function sayCustomHello($name  = "old chum")``<br />``
+  {``<br />``
+  echo "Hello, $name!";``<br />``
+  };``<br />
+* Il est possible de faire en sorte que les variables passées en paramètres d'une fonction soit modifiées de manière permanente par les instructions de la fonction :
+  <br />``function addXPermanently (&$param)``<br />``
+  {``<br />``
+  $param = $param . "X";``<br />``
+  echo $param;``<br />``
+  };``<br />``
+* Tous les paramètres définis dans une fonction ne peuvent pas être accédés en dehors de la fonction, à cause du scope local de ceux ci.
+* Pour pouvoir utiliser une variable définie précédement à l'intérieur d'une fonction il faut utiliser le mot-clé **global**.
+
+## Conditions
+
+* **Opérateur ?:** : Permet de vérifier si une condition est vraie ou fausse, et de retourner une valeur en fonction. Exemple :<br />
+``$isClicked = FALSE;``<br />``
+  $link_color = $isClicked ? "purple" : "blue";`` -> Retourne "purple" ou "blue"
