@@ -119,3 +119,24 @@ Les boucles **foreach** peuvent également être utilisées avec des tableaux as
 * **||** : OR
 * **&&** : AND
 * **!value** : NOT
+
+# Formulaires / Back-end spécificités / PHP&HTML
+## Les variables super globales
+* Les variables superglobales sont des variables qui peuvent être utilisées dans tous les scopes possibles. Elles sont générées automatiquement et sont reliées aux requêtes HTTP.
+  * **Liste des superglobals :**
+    * **$GLOBALS**
+    * **$_SERVER**
+    * **$_GET** = Contient un tableau associatif des variables passées dans l'URL via des paramètres.
+    * **$_POST** -> Contient un tableau associatif des variables passées via l'envoi d'un formulaire avec méthode POST.
+    * **$_FILES**
+    * **$_COOKIE**
+    * **$_SESSION**
+    * **$_REQUEST** = Contient tous les éléments des variables $_COOKIE, $_GET et $_POST.
+    * **$_ENV**
+
+# Back-end validation
+
+* Validation = Vérifier que les informations transmises par le biais d'un formulaire par l'utilisateur soient conformes au type de valeur attendu. On
+* La validation au niveau du back-end est impérative car la validation coté client reste peu sécurisée et le risque d'attaque entre le client et le back est important. Il est donc important de validesr une seconde fois les informations envoyées.
+* La validation coté back-end permet également de comparer l'info envoyée avec celles présentes en BDD (username/MDP par exemple).
+* Dernière défense, permet également de reformater toutes les données envoyées pour être sûr que la BDD soit uniforme.
