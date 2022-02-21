@@ -140,3 +140,113 @@ Les boucles **foreach** peuvent également être utilisées avec des tableaux as
 * La validation au niveau du back-end est impérative car la validation coté client reste peu sécurisée et le risque d'attaque entre le client et le back est important. Il est donc important de validesr une seconde fois les informations envoyées.
 * La validation coté back-end permet également de comparer l'info envoyée avec celles présentes en BDD (username/MDP par exemple).
 * Dernière défense, permet également de reformater toutes les données envoyées pour être sûr que la BDD soit uniforme.
+
+# POO (Orienté object)
+
+* Créer de nouveaux types de données, afin de représenter des entités complexes, qui ne peuvent pas être représentés par de simples chiffres, strings, ou booléens.
+* **Classes** : Une classe permet de représenter une entité, et comporte différentes données qui vont être propres à ce type d'entité. On définira par exemple qu'un étudiant se composera de différentes caractéristiques ;
+  * Un nom
+  * Un age
+  * Savoir si il est inscrit ou non 
+  * etc..
+
+Les classes peuvent également comporter des fonctions propres à elles mêmes.
+La classe correspond uniquement à la déclaration des attributs composant ce type d'entités. On déclare ce qui fait un étudiant, mais ce n'est pas cela qui en créé un.
+
+* **Objets :** Un objet est un élément faisant partie d'une classe. Dans l'exemple précédent cela correspondrait donc à un étudiant.
+
+## Déclaration basique d'une classe
+
+```php
+<?php
+class Beverage {
+  public $color, $opacity, $temperature;
+ }
+```
+
+## Instanciation d'un objet
+```php
+$very_good_dog = new Pet();
+```
+
+## Ajout d'une propriété à un objet
+```php
+$very_good_dog->name = "Lassie";
+```
+
+## Déclarer une méthode liée à une classe
+
+```php
+class Pet {
+  public $first, $last;
+  function getFullName() {
+    return $this->first . " " . $this->last;
+  }
+}
+```
+
+### Exemple :
+```php
+<?php
+class Beverage {
+  public $temperature, $color, $opacity;
+  function getInfo() {
+    return "This beverage is " . $this->temperature . " and " . $this->color . ".";
+  }
+}
+
+$soda = new Beverage();
+$soda->color = "black";
+$soda->temperature = "cold";
+
+echo $soda->getInfo();
+```
+
+## Les constructeurs
+
+* Les constructeurs sont des méthodes spéciales pouvant être assignées à une classe et qui sera appelée à chaque fois qu'un nouvel objet sera instancié, afin par exemple de mettre une valeur par défaut à une propriété.
+* Un constructeur peut également avoir des paramètres :
+```php
+class Pet {
+  public $deserves_love;
+  function __construct() {
+    $this->deserves_love = TRUE;
+  }
+}
+$my_dog = new Pet();
+if ($my_dog->deserves_love){
+  echo "I love you!";
+}
+// Prints: I love you!
+```
+### Exemple avec un paramètre :
+```php
+class Pet {
+public $name;
+function __construct($name) {
+$this->name = $name;
+}
+}
+$dog = new Pet("Lassie");
+echo $dog->name; // Prints: Lassie
+```
+## L'héritage
+
+* Pour créer une nouvelle classe possédant de base tous les attributs d'une autre classe, il faut utiliser l'héritage. La nouvelle classe créée possédera donc les mêmes attributs que la classe de base et pourra être modifiée sans répércussions sur l'originale.
+
+###Instanciation d'une classe avec héritage
+```php 
+class ChildClass extends ParentClass {
+ 
+}
+```
+
+
+* Si une fonction est créée dans une classe avec héritage, et qu'elle possède le même nom qu'une fonction présente dans la classe originale, la fonction de base sera remplacée par la nouvelle uniquement pour les objets de la classe héritées, sans modifier la fonction présente dans la classe de base.
+* Il est toujours possible d'appeler la méthode de base dans la classe héritée, en préfixant le nom de la fonction avec **::parent**.
+
+## Visibilité des propriétés
+
+* Il est possible de définir la visibilité des propriétés d'une classe grâce aux mots-clés **public** et **private**. Changer la visibilité d'une propriété aura pour effet de réduire ou d'étendre l'utilisation qui peut en être fait depuis l'extérieur de la définition de la classe.
+* Il sera par exemple impossible de **echo** une propriété qui aura une visibilité **private**.
+* Une propriété privée ne pourra même pas être utilisée dans les méthodes d'une classe héritée. Pour éviter cela il faut utiliser le type de visibilité **protected**.
