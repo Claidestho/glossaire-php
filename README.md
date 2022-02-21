@@ -29,7 +29,7 @@ Les variables en PHP sont déclarés de la manière suivante :
   ajout.
 * **unset()** : Permet de retirer entièrement une paire clé / valeur d'un tableau associatif.
 * **rand()** : Permet de retourner un nombre aléatoire.
-* **var_dump($)** : Affiche des informations concernant les variables choisies. Cette commande donne la valeur de la variable mais peut également donner le type de celle ci (float, int...).
+* **var_dump($)** : Affiche des informations concernant les variables choisies. Cette commande donne la valeur de la variable, mais peut également donner le type de celle ci (float, int...).
 ---
 ### Ajouter un élément à une array
 
