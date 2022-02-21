@@ -232,7 +232,7 @@ echo $dog->name; // Prints: Lassie
 ```
 ## L'héritage
 
-* Pour créer une nouvelle classe possédant de base tous les attributs d'une autre classe, il faut utiliser l'héritage. La nouvelle classe créée possédera donc les mêmes attributs que la classe de base et pourra être modifiée sans répércussions sur l'originale.
+* Pour créer une nouvelle classe possédant de base tous les attributs d'une autre classe, il faut utiliser l'héritage. La nouvelle classe créée possédera donc les mêmes attributs que la classe de base et pourra être modifiée sans repercussions sur l'originale.
 
 ###Instanciation d'une classe avec héritage
 ```php 
@@ -250,3 +250,12 @@ class ChildClass extends ParentClass {
 * Il est possible de définir la visibilité des propriétés d'une classe grâce aux mots-clés **public** et **private**. Changer la visibilité d'une propriété aura pour effet de réduire ou d'étendre l'utilisation qui peut en être fait depuis l'extérieur de la définition de la classe.
 * Il sera par exemple impossible de **echo** une propriété qui aura une visibilité **private**.
 * Une propriété privée ne pourra même pas être utilisée dans les méthodes d'une classe héritée. Pour éviter cela il faut utiliser le type de visibilité **protected**.
+
+## Définitions complémentaires
+
+* **Attributs :** Les attributs correspondent aux différentes propriétés définies lors de la création d'une classe. Cela correspond à plusieurs éléments représentant des caractéristiques (par exemple l'age ou le nom pour un étudiant.)
+* **Méthode :** Une méthode correspond à une fonction définie dans une classe, qui lui est propre.  
+* **Getter :** Un getter est une méthode définie dans une classe permettant d'accéder de manière sécurisée aux attributs de celles-ci.
+* **Setter :**
+* **Instancier :** Instancier signifie créer un nouvel objet correspondant à une classe, lui donner une existence.
+* **Overriding :** Surcharger, ou overrider, correspond à modifier les attributs hérités d'une classe par de nouveaux, en remplaçant les valeurs héritées par de nouvelles.
