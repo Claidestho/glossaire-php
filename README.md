@@ -265,10 +265,21 @@ class ChildClass extends ParentClass {
 ##Définitions
 
 * Le MVC est un modèle d'architecture utilisé pour coder. Il regroupe des bonnes pratiques et conventions utilisées afin d'organiser son code d'une manière cadrée et commune. L'architecture MVC se base sur le fait de fractionner la logique en trois parties distinctes : 
-  * Modèle : La partie modèle est celle qui est consacrée à la gestion des données du projet et à leur récupération. On peut inclure dans cette partie les connexions aux bases de données et les requêtes SQL par exemple. C'est dans le modèle que l'on va réaliser tous les traitements liés aux données. 
-  * Vue : La vue est consacrée à toute l'interface graphique de l'application. Il n'y a donc pas vraiment de traitement logique en PHP effectuée ici, ou alors très simple. Il est juste nécessaire de construite l'interface et de récupérer les bonnes données à afficher. 
-  * Contrôleur : 
-  * Contrôleur : 
-  * Contrôleur : 
-  * Contrôleur : 
-  * Contrôleur : 
+  * **Modèle :** La partie modèle est celle qui est consacrée à la gestion des données du projet et à leur récupération. On peut inclure dans cette partie les connexions aux bases de données et les requêtes SQL par exemple. C'est dans le modèle que l'on va réaliser tous les traitements liés aux données. Par convention le nom des modèles commence par une MAJUSCULE.
+  * **Vue :** La vue est consacrée à toute l'interface graphique de l'application. Il n'y a donc pas vraiment de traitement logique en PHP effectuée ici, ou alors très simple. Il est juste nécessaire de construite l'interface et de récupérer les bonnes données à afficher. 
+  * **Contrôleur :** Le contrôleur est la pour faire la liaison entre les données gérées dans le modèle, et ce qui va être affiché par le biais de la vue. Le contrôleur va gérer les actions faites par les utilisateurs, et s'occuper des traitements nécessaires suite à celles-ci. Par convention le nom des contrôleurs commence par une MAJUSCULE.
+  * **Le routeur** : Une application complexe se basant sur l'architecture MVC pourra présenter plusieurs contrôleurs, qui devront être appelés en fonction de certaines actions faites par les utilisateurs. Pour savoir quel contrôleur doit être appelés, on utilise un routeur. Le routeur est essentiel pour que les bons traitements soient effectués, c'est donc le point d'entrée d'une application. 
+  * **Le rôle des éléments :** 
+
+  <p align="center">
+  <img src="./imgs/mvc.png" />
+</p>
+
+* **Leurs interactions :**
+
+<p align="center">
+  <img src="./imgs/mvc_relation.jpg" />
+</p>
+
+* **ORM :** Pour Object Relational Mapping. Un ORM a pour but de modifier la manière d'intéragir avec une base de données relationnel, afin d'y intégrer les principes de la programmation orientée objet. Au lieu de manipuler directement les tables d'une base de données, le développeur passera donc par des objets. Les classes sont souvent fournies par les principaux frameworks utilisés.
+* **Framework :** Un framework est un cadre donné aux développeurs afin de pouvoir créer des applications de manière plus simple. Un framework regroupe un ensemble de composant deja codés qui permettent de créer du code de manière cadrée et plus rapide, sans avoir à chaque fois à recréer tous les outils nécessaires.
