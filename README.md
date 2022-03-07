@@ -259,3 +259,16 @@ class ChildClass extends ParentClass {
 * **Setter :**
 * **Instancier :** Instancier signifie créer un nouvel objet correspondant à une classe, lui donner une existence.
 * **Overriding :** Surcharger, ou overrider, correspond à modifier les attributs hérités d'une classe par de nouveaux, en remplaçant les valeurs héritées par de nouvelles.
+
+# Le MVC - Modèle-vue-contrôleur
+
+##Définitions
+
+* Le MVC est un modèle d'architecture utilisé pour coder. Il regroupe des bonnes pratiques et conventions utilisées afin d'organiser son code d'une manière cadrée et commune. L'architecture MVC se base sur le fait de fractionner la logique en trois parties distinctes : 
+  * Modèle : La partie modèle est celle qui est consacrée à la gestion des données du projet et à leur récupération. On peut inclure dans cette partie les connexions aux bases de données et les requêtes SQL par exemple. C'est dans le modèle que l'on va réaliser tous les traitements liés aux données. 
+  * Vue : La vue est consacrée à toute l'interface graphique de l'application. Il n'y a donc pas vraiment de traitement logique en PHP effectuée ici, ou alors très simple. Il est juste nécessaire de construite l'interface et de récupérer les bonnes données à afficher. 
+  * Contrôleur : 
+  * Contrôleur : 
+  * Contrôleur : 
+  * Contrôleur : 
+  * Contrôleur : 
