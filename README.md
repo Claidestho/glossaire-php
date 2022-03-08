@@ -283,3 +283,10 @@ class ChildClass extends ParentClass {
 
 * **ORM :** Pour Object Relational Mapping. Un ORM a pour but de modifier la manière d'intéragir avec une base de données relationnel, afin d'y intégrer les principes de la programmation orientée objet. Au lieu de manipuler directement les tables d'une base de données, le développeur passera donc par des objets. Les classes sont souvent fournies par les principaux frameworks utilisés.
 * **Framework :** Un framework est un cadre donné aux développeurs afin de pouvoir créer des applications de manière plus simple. Un framework regroupe un ensemble de composant deja codés qui permettent de créer du code de manière cadrée et plus rapide, sans avoir à chaque fois à recréer tous les outils nécessaires.
+
+## Hiérarchie dossier des projets Laravel
+* **app** : Ce dossier est très important il contient notamment les fichiers de création des contrôleurs du projet. Il contient également tous les modèles du projet et les fichiers permettant de gérer quelles données sont partagées entre les différentes parties du projet.
+* **config** : Contient tous les fichiers de configuration du projet.
+* **routes** : Ce dossier contient tous les fichiers en rapport avec la configuration des routes d'un projet Laravel. Les routes permettent de faire correspondre les données avec les vues correspondantes. C'est ici que l'on fait correspondre une URL à une vue donnée.
+* **vendor** : Contient tous les fichiers provenant de bibliothèque externes. Comme la DebugBar.
+* 
