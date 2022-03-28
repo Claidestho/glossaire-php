@@ -289,4 +289,10 @@ class ChildClass extends ParentClass {
 * **config** : Contient tous les fichiers de configuration du projet.
 * **routes** : Ce dossier contient tous les fichiers en rapport avec la configuration des routes d'un projet Laravel. Les routes permettent de faire correspondre les données avec les vues correspondantes. C'est ici que l'on fait correspondre une URL à une vue donnée.
 * **vendor** : Contient tous les fichiers provenant de bibliothèque externes. Comme la DebugBar.
-* 
+
+### Après le clonage d'un projet laravel toujours faire un composer install + création du fichier .env
+
+## Les requêtes HTTP 
+
+* **GET** : Cette requête "demande" aux serveurs des ressources présentes ou non sur celui ci.
+* **POST** : 
